@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Our Service - NeoSaphien</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Anda bisa menambahkan warna kustom di sini nanti
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-900/30 backdrop-blur-lg border-b border-white/10 shadow-lg"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="text-2xl font-bold text-white">
+            NeoSaphien
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Services</a
+            >
+            <a
+              href="portfolio.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Success Stories</a
+            >
+            <a
+              href="blog.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Blog</a
+            >
+            <a
+              href="contact.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Contact</a
+            >
+          </div>
+
+          <a
+            href="#"
+            class="hidden md:block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300"
+          >
+            Mulai Belajar
+          </a>
+
+          <div class="md:hidden">
+            <button id="tombol-menu" class="text-white focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="menu-seluler" class="hidden md:hidden mt-4">
+          <a
+            href="index.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Services</a
+          >
+          <a
+            href="portfolio.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Success Stories</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="block mt-2 bg-purple-600 hover:bg-purple-700 text-white text-center font-bold py-2 px-4 rounded-lg transition-colors duration-300"
+          >
+            Mulai Belajar
+          </a>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-24 sm:pt-28">
+      <section id="services-main" class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl sm:text-5xl font-bold text-white">
+            <span
+              class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
+              >Layanan</span
+            >
+            &
+            <span
+              class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
+              >Jalur Belajar</span
+            >
+          </h1>
+          <p class="text-gray-400 mt-3 max-w-2xl mx-auto">
+            Pilih jalur, hitung investasi Anda, atau bandingkan paket kami untuk
+            memulai evolusi skill Anda.
+          </p>
+        </div>
+
+        <div class="mb-8 flex justify-center border-b border-gray-700">
+          <button
+            data-target="#panel-katalog"
+            class="tab-tombol tab-aktif py-4 px-6 block font-medium border-b-2 border-transparent hover:text-white focus:outline-none"
+          >
+            Katalog Kursus
+          </button>
+          <button
+            data-target="#panel-kalkulator"
+            class="tab-tombol py-4 px-6 block font-medium border-b-2 border-transparent hover:text-white focus:outline-none"
+          >
+            Kalkulator Harga
+          </button>
+          <button
+            data-target="#panel-perbandingan"
+            class="tab-tombol py-4 px-6 block font-medium border-b-2 border-transparent hover:text-white focus:outline-none"
+          >
+            Bandingkan Paket
+          </button>
+        </div>
+
+        <div>
+          <div id="panel-katalog" class="tab-panel">
+            <div
+              id="filter-tombol"
+              class="flex justify-center flex-wrap gap-4 mb-10"
+            >
+              <button
+                data-filter="all"
+                class="filter-tombol filter-aktif bg-purple-600 text-white py-2 px-5 rounded-full text-sm font-semibold"
+              >
+                Semua
+              </button>
+              <button
+                data-filter="web-dev"
+                class="filter-tombol bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-5 rounded-full text-sm font-semibold transition-colors"
+              >
+                Web Development
+              </button>
+              <button
+                data-filter="data-science"
+                class="filter-tombol bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-5 rounded-full text-sm font-semibold transition-colors"
+              >
+                Data Science
+              </button>
+              <button
+                data-filter="ui-ux"
+                class="filter-tombol bg-gray-700 hover:bg-gray-600 text-gray-200 py-2 px-5 rounded-full text-sm font-semibold transition-colors"
+              >
+                UI/UX Design
+              </button>
+            </div>
+
+            <div
+              id="katalog-grid"
+              class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+            ></div>
+          </div>
+          <div id="panel-kalkulator" class="tab-panel hidden">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 py-8">
+              <div class="lg:col-span-2">
+                <h2 class="text-3xl font-bold text-white mb-6">
+                  Kustomisasi Paket Belajar Anda
+                </h2>
+
+                <form id="form-kalkulator">
+                  <fieldset class="mb-8">
+                    <legend class="text-xl font-semibold text-white mb-4">
+                      1. Pilih Paket Dasar
+                    </legend>
+                    <div class="space-y-4">
+                      <label
+                        class="block p-6 rounded-lg border border-gray-700 bg-white/5 cursor-pointer has-[:checked]:border-purple-500 has-[:checked]:bg-purple-900/20 transition-all"
+                      >
+                        <input
+                          type="radio"
+                          name="paket"
+                          value="Voyager"
+                          data-harga="250000"
+                          class="hidden"
+                        />
+                        <div class="flex justify-between items-center">
+                          <span class="font-bold text-white"
+                            >Paket Voyager</span
+                          >
+                          <span class="font-semibold text-gray-300"
+                            >Rp 250.000 / bulan</span
+                          >
+                        </div>
+                        <p class="text-sm text-gray-400 mt-2">
+                          Akses penuh ke semua jalur belajar, sertifikasi, dan
+                          cloud workspace.
+                        </p>
+                      </label>
+                      <label
+                        class="block p-6 rounded-lg border border-gray-700 bg-white/5 cursor-pointer has-[:checked]:border-purple-500 has-[:checked]:bg-purple-900/20 transition-all"
+                      >
+                        <input
+                          type="radio"
+                          name="paket"
+                          value="Odyssey"
+                          data-harga="2500000"
+                          class="hidden"
+                        />
+                        <div class="flex justify-between items-center">
+                          <span class="font-bold text-white"
+                            >Paket Odyssey</span
+                          >
+                          <span class="font-semibold text-gray-300"
+                            >Rp 2.500.000 / tahun</span
+                          >
+                        </div>
+                        <p class="text-sm text-gray-400 mt-2">
+                          Semua fitur Voyager ditambah akses eksklusif ke Elite
+                          Mentorship Network.
+                        </p>
+                      </label>
+                    </div>
+                  </fieldset>
+
+                  <fieldset>
+                    <legend class="text-xl font-semibold text-white mb-4">
+                      2. Pilih Fitur Tambahan (Opsional)
+                    </legend>
+                    <div class="space-y-4">
+                      <label
+                        class="flex items-center p-6 rounded-lg border border-gray-700 bg-white/5 cursor-pointer has-[:checked]:border-purple-500 has-[:checked]:bg-purple-900/20 transition-all"
+                      >
+                        <input
+                          type="checkbox"
+                          name="addon"
+                          value="Sesi Mentoring 1-on-1"
+                          data-harga="500000"
+                          class="h-5 w-5 rounded bg-gray-700 border-gray-600 text-purple-600 focus:ring-purple-500"
+                        />
+                        <div
+                          class="ml-4 flex-grow flex justify-between items-center"
+                        >
+                          <div>
+                            <span class="font-bold text-white"
+                              >Sesi Mentoring 1-on-1</span
+                            >
+                            <p class="text-sm text-gray-400">
+                              Bimbingan intensif per sesi dengan ahli industri.
+                            </p>
+                          </div>
+                          <span class="font-semibold text-gray-300"
+                            >+ Rp 500.000</span
+                          >
+                        </div>
+                      </label>
+                      <label
+                        class="flex items-center p-6 rounded-lg border border-gray-700 bg-white/5 cursor-pointer has-[:checked]:border-purple-500 has-[:checked]:bg-purple-900/20 transition-all"
+                      >
+                        <input
+                          type="checkbox"
+                          name="addon"
+                          value="Career Path Guidance"
+                          data-harga="350000"
+                          class="h-5 w-5 rounded bg-gray-700 border-gray-600 text-purple-600 focus:ring-purple-500"
+                        />
+                        <div
+                          class="ml-4 flex-grow flex justify-between items-center"
+                        >
+                          <div>
+                            <span class="font-bold text-white"
+                              >Career Path Guidance</span
+                            >
+                            <p class="text-sm text-gray-400">
+                              Bantuan penyusunan CV, portfolio, dan simulasi
+                              interview.
+                            </p>
+                          </div>
+                          <span class="font-semibold text-gray-300"
+                            >+ Rp 350.000</span
+                          >
+                        </div>
+                      </label>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+
+              <div class="lg:col-span-1">
+                <div class="lg:sticky lg:top-28">
+                  <div
+                    class="rounded-xl bg-white/5 backdrop-blur-lg border border-white/10 p-8"
+                  >
+                    <h3 class="text-2xl font-bold text-white text-center">
+                      Estimasi Biaya Anda
+                    </h3>
+                    <div class="my-6 text-center">
+                      <span
+                        id="total-harga"
+                        class="text-5xl font-bold text-purple-400"
+                        >Rp 0</span
+                      >
+                    </div>
+                    <div
+                      id="ringkasan-pilihan"
+                      class="border-t border-gray-700 pt-6 space-y-2 text-sm"
+                    >
+                      <p class="text-gray-400 text-center">
+                        Silakan pilih paket untuk melihat ringkasan.
+                      </p>
+                    </div>
+                    <button
+                      class="w-full mt-8 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+                    >
+                      Lanjutkan Pembayaran
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="panel-perbandingan" class="tab-panel hidden">
+            <div class="py-8">
+              <div class="text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-white">
+                  Bandingkan Paket Kami
+                </h2>
+                <p class="text-gray-400 mt-3 max-w-2xl mx-auto">
+                  Pilih paket yang paling sesuai dengan tujuan belajar dan
+                  anggaran Anda.
+                </p>
+              </div>
+
+              <div
+                class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-12 max-w-5xl mx-auto"
+              >
+                <div
+                  class="flex flex-col bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400"
+                >
+                  <h3 class="text-2xl font-bold text-white">Explorer</h3>
+                  <p class="text-sm text-gray-400 mt-2">
+                    Untuk mencoba dan memulai
+                  </p>
+                  <div class="mt-6">
+                    <span class="text-5xl font-extrabold text-white"
+                      >Gratis</span
+                    >
+                  </div>
+                  <hr class="border-gray-700 my-8" />
+                  <ul class="space-y-4 text-gray-300 flex-grow">
+                    <li class="flex items-center">
+                      <svg
+                        class="w-5 h-5 text-green-400 mr-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Akses Modul Pengenalan
+                    </li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="block w-full mt-10 text-center bg-gray-600 hover:bg-gray-500 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+                  >
+                    Mulai Gratis
+                  </a>
+                </div>
+
+                <div
+                  class="flex flex-col bg-gray-800/50 backdrop-blur-lg border-2 border-purple-500 rounded-xl p-8 relative transition-all duration-300 hover:-translate-y-2"
+                >
+                  <span
+                    class="absolute top-0 -translate-y-1/2 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase"
+                    >Paling Populer</span
+                  >
+                  <h3 class="text-2xl font-bold text-white">Voyager</h3>
+                  <p class="text-sm text-purple-300 mt-2">
+                    Untuk pertumbuhan karir serius
+                  </p>
+                  <div class="mt-6">
+                    <span class="text-5xl font-extrabold text-white"
+                      >Rp 250rb</span
+                    >
+                    <span class="text-gray-400">/bulan</span>
+                  </div>
+                  <hr class="border-gray-700 my-8" />
+                  <ul class="space-y-4 text-gray-300 flex-grow">
+                    <li class="flex items-center">
+                      <svg
+                        class="w-5 h-5 text-green-400 mr-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Akses Penuh Semua Kursus
+                    </li>
+                    <li class="flex items-center">
+                      <svg
+                        class="w-5 h-5 text-green-400 mr-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Sertifikat Kelulusan
+                    </li>
+                    <li class="flex items-center">
+                      <svg
+                        class="w-5 h-5 text-green-400 mr-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Akses Cloud Workspace
+                    </li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="block w-full mt-10 text-center bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+                  >
+                    Pilih Paket Pro
+                  </a>
+                </div>
+
+                <div
+                  class="flex flex-col bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-8 transition-all duration-300 hover:-translate-y-2 hover:border-purple-400"
+                >
+                  <h3 class="text-2xl font-bold text-white">Odyssey</h3>
+                  <p class="text-sm text-gray-400 mt-2">
+                    Untuk keunggulan kompetitif
+                  </p>
+                  <div class="mt-6">
+                    <span class="text-5xl font-extrabold text-white"
+                      >Rp 2.5jt</span
+                    >
+                    <span class="text-gray-400">/tahun</span>
+                  </div>
+                  <hr class="border-gray-700 my-8" />
+                  <ul class="space-y-4 text-gray-300 flex-grow">
+                    <li class="flex items-center">
+                      <svg
+                        class="w-5 h-5 text-green-400 mr-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Semua fitur di paket Pro
+                    </li>
+                    <li class="flex items-center">
+                      <svg
+                        class="w-5 h-5 text-green-400 mr-3"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                      Akses Elite Mentorship
+                    </li>
+                  </ul>
+                  <a
+                    href="#"
+                    class="block w-full mt-10 text-center bg-gray-600 hover:bg-gray-500 text-white font-bold py-3 px-4 rounded-lg transition-colors"
+                  >
+                    Pilih Paket Premium
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-gray-900/30 backdrop-blur-lg mt-20 border-t border-white/10"
+    >
+      <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+        <p>&copy; 2025 NeoSaphien. All Rights Reserved.</p>
+        <p class="text-sm mt-1">Evolve Your Mind. Shape Your Future.</p>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
