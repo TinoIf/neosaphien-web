@@ -106,3 +106,59 @@
 .timeline-item.is-visible .dot-inner {
   transform: scale(1);
 }
+/* Style untuk Tombol Filter Aktif di Halaman Services */
+.filter-tombol.filter-aktif {
+  background-color: #9333ea; /* Warna ungu-600 Tailwind */
+  color: white;
+}
+/* Style untuk Tombol Tab di Halaman Services */
+.tab-tombol {
+  color: #9ca3af; /* Warna text-gray-400 Tailwind */
+  border-bottom-color: transparent;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+/* Style untuk tombol yang sedang aktif */
+.tab-tombol.tab-aktif {
+  color: white;
+  border-bottom-color: #9333ea; /* Warna border-purple-500 Tailwind */
+}
+/* CSS Kustom untuk Penanda Peta di Halaman Portfolio */
+.penanda-peta {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.penanda-peta .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #a855f7; /* Warna purple-500 */
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.penanda-peta .pulse {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #a855f7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: pulse-animation 2s infinite;
+}
+@keyframes pulse-animation {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
