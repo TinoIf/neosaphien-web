@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Homepage - NeoSaphien</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              // Anda bisa menambahkan warna kustom di sini nanti
+            },
+          },
+        },
+      }
+    </script>
+  </head>
+  <body class="bg-gray-900 text-white">
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-900/30 backdrop-blur-lg border-b border-white/10 shadow-lg"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="text-2xl font-bold text-white">
+            NeoSaphien
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="text-white hover:text-purple-400 transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Services</a
+            >
+            <a
+              href="portfolio.html"
+              class="text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Success Stories</a
+            >
+            <a
+              href="contact.html"
+              class="text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Contact</a
+            >
+          </div>
+
+          <a
+            href="#"
+            class="hidden md:block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300"
+          >
+            Mulai Belajar
+          </a>
+
+          <div class="md:hidden">
+            <button id="tombol-menu" class="text-white focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="menu-seluler" class="hidden md:hidden mt-4">
+          <a
+            href="index.html"
+            class="block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Services</a
+          >
+          <a
+            href="portfolio.html"
+            class="block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Success Stories</a
+          >
+          <a
+            href="contact.html"
+            class="block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="block mt-2 bg-purple-600 hover:bg-purple-700 text-white text-center font-bold py-2 px-4 rounded-lg transition-colors duration-300"
+          >
+            Mulai Belajar
+          </a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section
+        id="hero"
+        class="relative h-screen flex items-center justify-center text-center overflow-hidden"
+      >
+        <div
+          id="latar-parallax"
+          class="absolute top-0 left-0 w-full h-full bg-cover bg-center"
+          style="background-image: url('assets/images/hero-bg.jpg')"
+        ></div>
+
+        <div class="absolute top-0 left-0 w-full h-full bg-black/60"></div>
+
+        <div class="relative z-10 text-white px-4">
+          <h1
+            class="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight leading-tight drop-shadow-lg"
+          >
+            Evolve Your <span class="text-purple-400">Mind</span>
+          </h1>
+
+          <p
+            id="efek-ketik"
+            class="italic text-lg md:text-2xl mt-4 font-light text-purple-300 h-8"
+          ></p>
+
+          <div
+            id="statistik"
+            class="mt-12 flex flex-wrap justify-center gap-8 md:gap-16"
+          >
+            <div>
+              <span id="counter-modul" class="text-4xl font-bold">300</span>+
+              <p class="text-sm text-gray-300 uppercase tracking-widest">
+                Modules
+              </p>
+            </div>
+            <div>
+              <span id="counter-pengguna" class="text-4xl font-bold">10000</span
+              >+
+              <p class="text-sm text-gray-300 uppercase tracking-widest">
+                Learners
+              </p>
+            </div>
+            <div>
+              <span id="counter-mitra" class="text-4xl font-bold">40</span>+
+              <p class="text-sm text-gray-300 uppercase tracking-widest">
+                Partners
+              </p>
+            </div>
+          </div>
+
+          <a
+            href="#fitur"
+            class="mt-12 inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform duration-300 hover:scale-105 shadow-lg"
+          >
+            Jelajahi Fitur
+          </a>
+        </div>
+      </section>
+    </main>
+    <section id="fitur" class="relative bg-gray-900 py-20 sm:py-24">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white">
+          Platform Belajar Generasi Berikutnya
+        </h2>
+        <p class="text-gray-400 mt-3 max-w-2xl mx-auto">
+          Semua yang Anda butuhkan untuk evolusi skill Anda, dirancang dengan
+          teknologi terdepan untuk hasil maksimal.
+        </p>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-16">
+          <div
+            class="kartu-fitur group bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 transition duration-300 hover:-translate-y-2 hover:bg-white/10 flex flex-col"
+          >
+            <div class="flex-grow">
+              <div
+                class="flex justify-center items-center h-16 w-16 rounded-full bg-purple-900/50 mx-auto"
+              >
+                <svg
+                  class="w-8 h-8 text-purple-300 transition-transform duration-300 group-hover:scale-110"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.898 20.572L16.5 21.75l-.398-1.178a3.375 3.375 0 00-2.456-2.456L12.75 18l1.178-.398a3.375 3.375 0 002.456-2.456L16.5 14.25l.398 1.178a3.375 3.375 0 002.456 2.456L20.25 18l-1.178.398a3.375 3.375 0 00-2.456 2.456z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mt-6 text-white">
+                Adaptive Learning
+              </h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                Kurikulum yang beradaptasi secara real-time dengan kecepatan dan
+                pemahaman Anda.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-white/10">
+              <button
+                class="tombol-detail text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                Selengkapnya
+              </button>
+              <div
+                class="detail-fitur hidden mt-4 text-left text-sm text-gray-300"
+              >
+                <p>
+                  Teknologi AI kami menganalisa performa Anda untuk
+                  merekomendasikan modul yang paling relevan, memastikan tidak
+                  ada waktu yang terbuang.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="kartu-fitur group bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 transition duration-300 hover:-translate-y-2 hover:bg-white/10 flex flex-col"
+          >
+            <div class="flex-grow">
+              <div
+                class="flex justify-center items-center h-16 w-16 rounded-full bg-purple-900/50 mx-auto"
+              >
+                <svg
+                  class="w-8 h-8 text-purple-300 transition-transform duration-300 group-hover:scale-110"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 17.25v-.228a4.5 4.5 0 00-.12-1.03l-2.268-9.64a3.375 3.375 0 00-3.285-2.67H7.525a3.375 3.375 0 00-3.285 2.67l-2.268 9.64a4.5 4.5 0 00-.12 1.03v.228m19.5 0a3 3 0 01-3 3H5.25a3 3 0 01-3-3m19.5 0a3 3 0 00-3-3H5.25a3 3 0 00-3 3m16.5 0h.008v.008h-.008v-.008z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mt-6 text-white">Cloud Workspace</h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                Praktik langsung dalam lingkungan pengembangan berbasis cloud,
+                tanpa perlu setup.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-white/10">
+              <button
+                class="tombol-detail text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                Selengkapnya
+              </button>
+              <div
+                class="detail-fitur hidden mt-4 text-left text-sm text-gray-300"
+              >
+                <p>
+                  Lingkungan coding kami sudah terkonfigurasi untuk setiap
+                  bahasa dan framework, memungkinkan Anda fokus belajar, bukan
+                  setup.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="kartu-fitur group bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 transition duration-300 hover:-translate-y-2 hover:bg-white/10 flex flex-col"
+          >
+            <div class="flex-grow">
+              <div
+                class="flex justify-center items-center h-16 w-16 rounded-full bg-purple-900/50 mx-auto"
+              >
+                <svg
+                  class="w-8 h-8 text-purple-300 transition-transform duration-300 group-hover:scale-110"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.905 59.905 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0l-2.172 1.937A59.905 59.905 0 0112 3.493a59.905 59.905 0 0110.399 5.84l-2.172-1.937m-15.482 0c.23.633.468 1.28.718 1.937A59.905 59.905 0 0112 3.493a59.905 59.905 0 0110.399 5.84c.25-.657.488-1.304.718-1.937"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mt-6 text-white">
+                Future-Ready Certification
+              </h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                Dapatkan kredensial yang diakui secara global untuk keahlian
+                masa depan.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-white/10">
+              <button
+                class="tombol-detail text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                Selengkapnya
+              </button>
+              <div
+                class="detail-fitur hidden mt-4 text-left text-sm text-gray-300"
+              >
+                <p>
+                  Sertifikat kami diverifikasi melalui blockchain untuk keaslian
+                  maksimal dan diakui oleh jaringan mitra industri global kami.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="kartu-fitur group bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl p-6 transition duration-300 hover:-translate-y-2 hover:bg-white/10 flex flex-col"
+          >
+            <div class="flex-grow">
+              <div
+                class="flex justify-center items-center h-16 w-16 rounded-full bg-purple-900/50 mx-auto"
+              >
+                <svg
+                  class="w-8 h-8 text-purple-300 transition-transform duration-300 group-hover:scale-110"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m-7.5-2.28a4.5 4.5 0 00-1.897 1.13l-2.685 2.685a1.125 1.125 0 01-1.591 0l-2.685-2.685a4.5 4.5 0 00-1.897-1.13L5.25 14.25l-2.685-2.685a4.5 4.5 0 00-1.13-1.897L1.28 9.75l2.685-2.685a4.5 4.5 0 001.13-1.897L5.25 5.25l2.685 2.685a4.5 4.5 0 001.897 1.13l2.685 2.685a1.125 1.125 0 010 1.591l-2.685 2.685z"
+                  />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold mt-6 text-white">
+                Elite Mentorship
+              </h3>
+              <p class="text-gray-400 mt-2 text-sm">
+                Akses sesi eksklusif dengan para pemimpin industri dan inovator
+                global.
+              </p>
+            </div>
+            <div class="pt-4 mt-6 border-t border-white/10">
+              <button
+                class="tombol-detail text-sm font-semibold text-purple-300 hover:text-purple-200"
+              >
+                Selengkapnya
+              </button>
+              <div
+                class="detail-fitur hidden mt-4 text-left text-sm text-gray-300"
+              >
+                <p>
+                  Jaringan mentor kami terdiri dari para ahli di perusahaan top
+                  dunia yang siap membagikan wawasan praktis yang tidak akan
+                  Anda temukan di tempat lain.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="testimoni" class="relative bg-gray-800 py-20 sm:py-24">
+      <div class="container mx-auto px-6 text-center">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white">
+          Dipercaya oleh Para Inovator Global
+        </h2>
+        <p class="text-gray-400 mt-3 max-w-2xl mx-auto">
+          Jangan hanya mendengar dari kami. Lihat apa kata para pembelajar kami
+          tentang pengalaman mereka.
+        </p>
+
+        <div class="relative mt-16 w-full max-w-4xl mx-auto">
+          <div id="carousel-wrapper" class="overflow-hidden rounded-xl">
+            <div
+              id="carousel-track"
+              class="flex transition-transform duration-500 ease-in-out"
+            ></div>
+          </div>
+
+          <button
+            id="tombol-prev"
+            class="absolute top-1/2 -left-4 md:-left-12 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors z-10"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M15 19l-7-7 7-7"
+              ></path>
+            </svg>
+          </button>
+          <button
+            id="tombol-next"
+            class="absolute top-1/2 -right-4 md:-right-12 -translate-y-1/2 bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors z-10"
+          >
+            <svg
+              class="w-6 h-6 text-white"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="bg-gray-900/30 backdrop-blur-lg mt-20 border-t border-white/10"
+    >
+      <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+        <p>&copy; 2025 NeoSaphien. All Rights Reserved.</p>
+        <p class="text-sm mt-1">Evolve Your Mind. Shape Your Future.</p>
+      </div>
+    </footer>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

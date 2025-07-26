@@ -1,0 +1,54 @@
+/* Custom CSS untuk Efek Ketik */
+#efek-ketik::after {
+  content: '_'; /* Karakter yang akan menjadi kursor */
+  display: inline-block;
+  animation: blink 0.7s infinite; /* Nama animasi, durasi, dan pengulangan */
+  margin-left: 2px;
+}
+
+/* Animasi untuk membuat kursor berkedip */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Improvisasi: Efek cahaya pada kartu fitur (Revisi 2 - Lebih Terlihat) */
+
+.kartu-fitur {
+  position: relative;
+  overflow: hidden;
+}
+
+.kartu-fitur::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+
+  /* REVISI 1: Warna dibuat lebih pekat (alpha 0.4) & gradasi lebih lebar (70%) */
+  background: radial-gradient(
+    circle at top left,
+    rgba(168, 85, 247, 0.8),
+    transparent 70%
+  );
+
+  /* REVISI 2: Tambahkan filter blur untuk efek cahaya yang lembut dan menyebar */
+  filter: blur(80px);
+
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.kartu-fitur:hover::before {
+  opacity: 1;
+}
