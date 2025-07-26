@@ -119,6 +119,6 @@ Berikut adalah rincian detail dari setiap fitur dan elemen interaktif yang telah
 
 ## Cara Menjalankan Proyek
 
-1.  Clone repositori ini ke komputer lokal Anda (`git clone [URL_REPO_ANDA]`).
+1.  Clone repositori ini ke komputer lokal Anda (`git clone [[URL_REPO_ANDA](https://github.com/TinoIf/neosaphien-web.git)]`).
 2.  Buka folder proyek.
 3.  Buka file `index.html` menggunakan browser web modern (disarankan Google Chrome atau Firefox).
