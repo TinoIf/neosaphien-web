@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - NeoSaphien</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body class="bg-gray-900 text-white">
+    <nav
+      id="navbar"
+      class="fixed top-0 left-0 right-0 z-50 bg-gray-900/30 backdrop-blur-lg border-b border-white/10 shadow-lg"
+    >
+      <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a href="index.html" class="text-2xl font-bold text-white">
+            NeoSaphien
+          </a>
+
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="index.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Home</a
+            >
+            <a
+              href="about.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >About</a
+            >
+            <a
+              href="services.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Services</a
+            >
+            <a
+              href="portfolio.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Success Stories</a
+            >
+            <a
+              href="blog.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Blog</a
+            >
+            <a
+              href="contact.html"
+              class="nav-link text-gray-300 hover:text-purple-400 transition-colors duration-300"
+              >Contact</a
+            >
+          </div>
+
+          <a
+            href="#"
+            class="hidden md:block bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-lg transition-colors duration-300"
+          >
+            Mulai Belajar
+          </a>
+
+          <div class="md:hidden">
+            <button id="tombol-menu" class="text-white focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="menu-seluler" class="hidden md:hidden mt-4">
+          <a
+            href="index.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Home</a
+          >
+          <a
+            href="about.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >About</a
+          >
+          <a
+            href="services.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Services</a
+          >
+          <a
+            href="portfolio.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Success Stories</a
+          >
+          <a
+            href="blog.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Blog</a
+          >
+          <a
+            href="contact.html"
+            class="nav-link block py-2 px-4 text-sm text-white hover:bg-gray-700 rounded"
+            >Contact</a
+          >
+          <a
+            href="#"
+            class="block mt-2 bg-purple-600 hover:bg-purple-700 text-white text-center font-bold py-2 px-4 rounded-lg transition-colors duration-300"
+          >
+            Mulai Belajar
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="pt-24 sm:pt-28">
+      <section id="blog-main" class="container mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+          <h1 class="text-4xl sm:text-5xl font-bold text-white">
+            <span
+              class="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent"
+              >Insight</span
+            >
+            from NeoSaphien
+          </h1>
+          <p class="text-gray-400 mt-3 max-w-2xl mx-auto">
+            Jelajahi artikel, tips, dan tren terbaru dari dunia teknologi dan
+            pendidikan.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
+          <div id="kolom-artikel" class="lg:col-span-2">
+            <div id="artikel-container" class="space-y-12"></div>
+            <div
+              id="paginasi-container"
+              class="flex justify-center items-center space-x-4 mt-16"
+            ></div>
+          </div>
+
+          <aside id="sidebar-blog" class="lg:col-span-1">
+            <div class="sticky top-28 space-y-8">
+              <div>
+                <h3 class="font-bold text-lg text-white mb-4">Cari Artikel</h3>
+                <input
+                  type="search"
+                  id="blog-search"
+                  placeholder="Ketik kata kunci..."
+                  class="w-full bg-gray-700 border-gray-600 rounded-lg px-4 py-2 focus:ring-purple-500 focus:border-purple-500"
+                />
+              </div>
+              <div>
+                <h3 class="font-bold text-lg text-white mb-4">Kategori</h3>
+                <div id="blog-kategori-filter" class="space-y-2"></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="bg-gray-900/30 backdrop-blur-lg mt-20 border-t border-white/10"
+    >
+      <div class="container mx-auto px-6 py-6 text-center text-gray-400">
+        <p>&copy; 2025 NeoSaphien. All Rights Reserved.</p>
+        <p class="text-sm mt-1">Evolve Your Mind. Shape Your Future.</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
