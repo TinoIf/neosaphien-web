@@ -228,3 +228,34 @@ if (carouselTrack) {
   mulaiAutoSlide()
   window.addEventListener('resize', bangunCarousel)
 }
+// ======================= Logika untuk Animasi Scroll BERTINGKAT di Halaman About =======================
+const wadahTimeline = document.getElementById('wadah-timeline')
+
+if (wadahTimeline) {
+  const semuaItemTimeline = wadahTimeline.querySelectorAll('.timeline-item')
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        // Jika kontainer timeline masuk ke dalam viewport
+        if (entry.isIntersecting) {
+          // Loop setiap item di dalamnya dan berikan animasi dengan jeda
+          semuaItemTimeline.forEach((item, index) => {
+            setTimeout(() => {
+              item.classList.add('is-visible')
+            }, index * 500) // Jeda 200 milidetik antar setiap item
+          })
+
+          // Hentikan pengamatan setelah animasi berjalan sekali agar tidak berulang
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    {
+      threshold: 0.1, // Picu saat 10% kontainer terlihat
+    }
+  )
+
+  // Mulai amati kontainer timeline
+  observer.observe(wadahTimeline)
+}
