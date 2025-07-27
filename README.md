@@ -18,7 +18,6 @@ Tujuannya adalah untuk menciptakan sebuah website yang tidak hanya fungsional, t
 | :---: | :---: |
 | ![Screenshot Halaman Utama](assets/images/screenshot-homepage.png) | ![Screenshot Halaman Portfolio](assets/images/screenshot-portfolio.png) |
 
-*(**Instruksi:** Ambil screenshot dari halaman Anda, simpan dengan nama `screenshot-homepage.png` dan `screenshot-portfolio.png` di dalam folder `assets/images/`, lalu unggah ke GitHub.)*
 
 ---
 ## ✨ Fitur Utama & Interaktivitas
