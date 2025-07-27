@@ -16,7 +16,7 @@ Tujuannya adalah untuk menciptakan sebuah website yang tidak hanya fungsional, t
 
 | Halaman Utama | Halaman Portfolio |
 | :---: | :---: |
-| ![Screenshot Halaman Utama](assets/images/screenshot-homepage.png) | ![Screenshot Halaman Portfolio](assets/images/screenshot-portfolio.png) |
+| ![Screenshot Halaman Utama](assets/images/screenshot-homepage.png) | ![Screenshot Halaman About](assets/images/screenshot-portfolio.png) |
 
 
 ---
