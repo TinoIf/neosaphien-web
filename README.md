@@ -18,7 +18,6 @@ Tujuannya adalah untuk menciptakan sebuah website yang tidak hanya fungsional, t
 | :---: | :---: |
 | ![Screenshot Halaman Utama](assets/images/screenshot-homepage.png) | ![Screenshot Halaman Portfolio](assets/images/screenshot-portfolio.png) |
 
-*(**Instruksi:** Ambil screenshot dari halaman Anda, simpan dengan nama `screenshot-homepage.png` dan `screenshot-portfolio.png` di dalam folder `assets/images/`, lalu unggah ke GitHub.)*
 
 ---
 ## ✨ Fitur Utama & Interaktivitas
@@ -119,6 +118,6 @@ Berikut adalah rincian detail dari setiap fitur dan elemen interaktif yang telah
 
 ## Cara Menjalankan Proyek
 
-1.  Clone repositori ini ke komputer lokal Anda (`git clone [URL_REPO_ANDA]`).
+1.  Clone repositori ini ke komputer lokal Anda (`git clone [[URL_REPO_ANDA](https://github.com/TinoIf/neosaphien-web.git)]`).
 2.  Buka folder proyek.
 3.  Buka file `index.html` menggunakan browser web modern (disarankan Google Chrome atau Firefox).
